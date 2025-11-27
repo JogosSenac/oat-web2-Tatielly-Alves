@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PadraoMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+003217611fc9ab2810e762e186ba271711de4468")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afdf490ffeef6c34cdceeb96d7c9ebc828232d8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PadraoMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PadraoMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
