@@ -180,8 +180,6 @@ C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\Padr
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\1e030vf5vm-9vr69e8ynj.gz
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\xz305vg58r-87fc7y1x7t.gz
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\4xz3moeai2-mlv21k5csn.gz
-C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\5xdkgbh5u7-jq8hd76h4j.gz
-C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\r61593t0dj-jq8hd76h4j.gz
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\staticwebassets.development.json
@@ -191,3 +189,5 @@ C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\Padr
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\PadraoMVC.pdb
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\PadraoMVC.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\ref\PadraoMVC.dll
+C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\5xdkgbh5u7-crpl4z2au1.gz
+C:\Users\user\OneDrive\Documentos\Tatielly\SenacMVC\oat-web2-Tatielly-Alves\PadraoMVC\obj\Debug\net9.0\compressed\r61593t0dj-crpl4z2au1.gz

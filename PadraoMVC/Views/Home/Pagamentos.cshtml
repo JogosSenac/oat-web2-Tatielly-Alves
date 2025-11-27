@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Pagamentos e Compras";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Alguns carros estão disponíveis apenas em uma categoria! Seja ela compra ou aluguel do carro selecionado.</p>
+<p>Utilizamos esse padrão para facilitar a negociação e especificações de cada vendedor!</p>
+
+<!-- Lista com valores (atributo data-price em reais) -->
+<ul id="minha-checklist">
+    <li>
+        <input type="checkbox" id="Chevette" name="Chevette" data-price="20000" data-rent="4000">
+        <label for="Chevette">Chevette — R$ 20.000,00</label>
+    </li>
+    <li>
+        <input type="checkbox" id="Fusca" name="Fusca" data-price="45000" data-rent="10000">
+        <label for="Fusca">Fusca — R$ 45.000,00</label>
+    </li>
+    <li>
+        <input type="checkbox" id="Opala" name="Opala" data-price="98000" data-rent="20000">
+        <label for="Opala">Opala — R$ 98.000,00</label>
+    </li>
+    <li>
+        <input type="checkbox" id="Blazer" name="Blazer" data-price="30000" data-rent="8000">
+        <label for="Blazer">Blazer — R$ 30.000,00</label>
+    </li>
+    <li>
+        <input type="checkbox" id="Maverick" name="Maverick" data-price="200000" data-rent="50000">
+        <label for="Maverick">Maverick — R$ 200.000,00</label>
+    </li>
+    <li>
+        <input type="checkbox" id="Brasilia" name="Brasilia" data-price="18000" data-rent="6000">
+        <label for="Brasilia">Brasilia — R$ 18.000,00</label>
+    </li>
+</ul>
+
+
+<div class="mt-3">
+    <strong>Total selecionado: </strong>
+    <span id="total">R$ 0,00</span>
+</div>
+
+<!-- Botões de ação -->
+<div class="mt-3">
+    <button id="btn-compra" class="btn btn-success">Compra</button>
+    <button id="btn-aluguel" class="btn btn-info">Aluguel</button>
+</div>
+
+<!-- Resultado da ação -->
+<div id="acao-result" class="mt-3" aria-live="polite"></div>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<script>
+    (function () {
+        const checklist = document.getElementById('minha-checklist');
+        const totalEl = document.getElementById('total');
+        const formatBRL = (value) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+
+        function updateTotal() {
+            const checkboxes = checklist.querySelectorAll('input[type="checkbox"][data-price]');
+            let sum = 0;
+            checkboxes.forEach(cb => {
+                const price = parseFloat(cb.dataset.price) || 0;
+                if (cb.checked) sum += price;
+            });
+            totalEl.textContent = formatBRL(sum);
+        }
+
+        checklist.addEventListener('change', updateTotal);
+
+        updateTotal();
+
+        function getSelectedItems() {
+            const checkboxes = checklist.querySelectorAll('input[type="checkbox"][data-price]');
+            const items = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const label = checklist.querySelector('label[for="' + cb.id + '"]');
+                    const price = parseFloat(cb.dataset.price) || 0;
+                    const rent = parseFloat(cb.dataset.rent) || 0;
+                    items.push({ id: cb.id, label: label ? label.textContent.trim() : cb.id, price, rent });
+                }
+            });
+            return items;
+        }
+
+        function handleAction(mode) {
+            const items = getSelectedItems();
+            if (!items.length) {
+                document.getElementById('acao-result').innerHTML = '<div class="alert alert-warning">Nenhum item selecionado.</div>';
+                return;
+            }
+
+            const sum = items.reduce((s, it) => s + (mode === 'aluguel' ? it.rent : it.price), 0);
+            const listHtml = items.map(it => {
+                if (mode === 'aluguel') return '<li>' + it.label + ' — Entrada: ' + formatBRL(it.rent) + '</li>';
+                return '<li>' + it.label + ' — ' + formatBRL(it.price) + '</li>';
+            }).join('');
+            let note = '';
+            if (mode === 'aluguel') {
+                note = '<p class="mt-2"><small>Obs: Os valores de aluguel exibem as entradas iniciais conforme listado na página principal.</small></p>';
+            }
+
+            document.getElementById('acao-result').innerHTML =
+                '<div class="alert alert-success">'
+                + '<strong>Modo: ' + (mode === 'compra' ? 'Compra' : 'Aluguel') + '</strong>'
+                + '<p>Total: ' + formatBRL(sum) + '</p>'
+                + '<ul>' + listHtml + '</ul>'
+                + note
+                + '</div>';
+        }
+
+        const btnCompra = document.getElementById('btn-compra');
+        const btnAluguel = document.getElementById('btn-aluguel');
+        if (btnCompra) btnCompra.addEventListener('click', () => handleAction('compra'));
+        if (btnAluguel) btnAluguel.addEventListener('click', () => handleAction('aluguel'));
+
+        updateTotal();
+    })();
+</script>

@@ -17,7 +17,8 @@ a[b-gujwkpor93] {
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-gujwkpor93], .nav-pills .show > .nav-link[b-gujwkpor93] {
+.nav-pills .nav-link.active[b-gujwkpor93],
+.nav-pills .show>.nav-link[b-gujwkpor93] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
@@ -26,6 +27,7 @@ a[b-gujwkpor93] {
 .border-top[b-gujwkpor93] {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom[b-gujwkpor93] {
   border-bottom: 1px solid #e5e5e5;
 }
